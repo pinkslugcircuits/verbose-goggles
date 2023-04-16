@@ -5,7 +5,8 @@
 ## Background
 This repository holds an implementation of an example blockchain network where indicators modern slavery is traced. This implementation of an example blockchain is a proof of concept/prototype demonstrator that has been developed as part of a masters thesis conducted at Curtin University.
 
-The blockchain network consists of a physical building that is represented by a digital twin. Currently a digital twin contains no information on the final product fitted at time of build only the information on what should have been fitted at time of build. By connecting the digital twin to a blockchain containing information on the history of the product the digital twin is extended into a digital triplet.
+The blockchain network consists of a physical building that is represented by a digital twin. Currently a digital twin contains no information on the final product fitted at time of build only the information on what should have been fitted at time of build. 
+By connecting the digital twin to a blockchain containing information on the history of the product the digital twin is extended into a digital triplet.
 
 Hyperledger fabric was the blockchain tool chain selected by the researcher to develop this proof of concept/prototype in.
 
