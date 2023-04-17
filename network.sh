@@ -24,20 +24,20 @@ export VERBOSE=false
 
 # push to the required directory & set a trap to go back if needed
 #trap "popd > /dev/null" EXIT
-pushd "${ROOTDIR}" > /dev/null || EXIT
+pushd ${ROOTDIR} > /dev/null || EXIT
 
 . scripts/utils.sh
 
-: "${CONTAINER_CLI:="docker"}"
-: "${CONTAINER_CLI_COMPOSE:="${CONTAINER_CLI}-compose"}"
+: ${CONTAINER_CLI:="docker"}
+: ${CONTAINER_CLI_COMPOSE:="${CONTAINER_CLI}-compose"}
 infoln "Using ${CONTAINER_CLI} and ${CONTAINER_CLI_COMPOSE}"
 
 # Obtain CONTAINER_IDS and remove them
 # This function is called when you bring a network down
 function clearContainers() {
   infoln "Removing remaining containers"
-  ${CONTAINER_CLI} rm -f "$(${CONTAINER_CLI} ps -aq --filter label=service=hyperledger-fabric)" 2>/dev/null || true
-  ${CONTAINER_CLI} rm -f "$(${CONTAINER_CLI} ps -aq --filter name='dev-peer*')" 2>/dev/null || true
+  ${CONTAINER_CLI} rm -f $(${CONTAINER_CLI} ps -aq --filter label=service=hyperledger-fabric) 2>/dev/null || true
+  ${CONTAINER_CLI} rm -f $(${CONTAINER_CLI} ps -aq --filter name='dev-peer*') 2>/dev/null || true
 }
 
 # Delete any images that were generated as a part of this setup
@@ -45,7 +45,7 @@ function clearContainers() {
 # This function is called when you bring the network down
 function removeUnwantedImages() {
   infoln "Removing generated chaincode docker images"
-  ${CONTAINER_CLI} image rm -f "$(${CONTAINER_CLI} images -aq --filter reference='dev-peer*')" 2>/dev/null || true
+  ${CONTAINER_CLI} image rm -f $(${CONTAINER_CLI} images -aq --filter reference='dev-peer*') 2>/dev/null || true
 }
 
 # Versions of fabric known not to work with the test network
@@ -78,12 +78,12 @@ function checkPrereqs() {
   fi
 
   for UNSUPPORTED_VERSION in $NONWORKING_VERSIONS; do
-    infoln "$LOCAL_VERSION" | grep -q "$UNSUPPORTED_VERSION"
+    infoln "$LOCAL_VERSION" | grep -q $UNSUPPORTED_VERSION
     if [ $? -eq 0 ]; then
       fatalln "Local Fabric binary version of $LOCAL_VERSION does not match the versions supported by the test network."
     fi
 
-    infoln "$DOCKER_IMAGE_VERSION" | grep -q "$UNSUPPORTED_VERSION"
+    infoln "$DOCKER_IMAGE_VERSION" | grep -q $UNSUPPORTED_VERSION
     if [ $? -eq 0 ]; then
       fatalln "Fabric Docker image version of $DOCKER_IMAGE_VERSION does not match the versions supported by the test network."
     fi
@@ -194,7 +194,7 @@ function createOrgs() {
   # Create crypto material using Fabric CA
   if [ "$CRYPTO" == "Certificate Authorities" ]; then
     infoln "Generating certificates using Fabric CA"
-    ${CONTAINER_CLI_COMPOSE} -f compose/$COMPOSE_FILE_CA -f compose/"$CONTAINER_CLI"/"${CONTAINER_CLI}"-$COMPOSE_FILE_CA up -d 2>&1
+    ${CONTAINER_CLI_COMPOSE} -f compose/$COMPOSE_FILE_CA -f compose/$CONTAINER_CLI/${CONTAINER_CLI}-$COMPOSE_FILE_CA up -d 2>&1
 
     . organizations/fabric-ca/registerEnroll.sh
 
