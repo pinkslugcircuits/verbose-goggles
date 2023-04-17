@@ -20,3 +20,38 @@ Once the environment is setup you can then run the prototype network.
 ## Running the prototype network
 
 
+## System Architecture
+
+The blockchain network has the following components.
+
+### Ordering Services
+
+**O1** - This prototype only uses one ordering node for simplicity and to reduce the resource load.
+
+### Organizations and Peers
+
+There are few organizations however each organization only has one peer. In reality there would be several peers and ever departments within each organization.
+
+**R1** - Building organization  
+**R2** - Building certifier (for the E-score)  
+**R3** - Builder  
+**R4** - SpectrumBond (manufacturer and supplier of sheet metal roofs of various colours and styles)  
+**R5** - Concrete Queens Without Tiaras, CQWT (subcontractor that provides concreting solutions)  
+**R6** - Coral (Concrete mixes)  
+**R7** - Ninety degree beach cement (local importer of cement)  
+**R8** - Youngendorff Carriers (Dry bulk goods shipping company)  
+**R9** - net import deficit inc (exporter of cement)  
+**R10** - OuterCement (manufacturer of cement)  
+**R11** - Argentine Brick Pit (supplier of clay)  
+**R12** - Lemon and bitter mine (supplier of lime)  
+**R13** - Hourglass mine (supplier of sand)  
+**R14** - Hummings (supplier of building goods)  
+**R15** - Flora Slaughter (timber mill)  
+**R16** - Pine Wispier Plantation (pine tree plantation)  
+**R17** - Flora Supplier Certifier (plantation certifier)  
+**R18** - Janet Softings (supplier and manufacturer of building materials. Is a division of JS holdings)  
+**R19** - Janet Softings FC (manufacturer of FC sheets. Is a division of JS holdings)  
+**R20** - Architect  
+
+### Channel Configuration 
+
