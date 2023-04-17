@@ -51,7 +51,7 @@ There are few organizations however each organization only has one peer. In real
 **R17** - Flora Supplier Certifier (plantation certifier)  
 **R18** - Janet Softings (supplier and manufacturer of building materials. Is a division of JS holdings)  
 **R19** - Janet Softings FC (manufacturer of FC sheets. Is a division of JS holdings)  
-**R20** - Architect  
+**R20** - Architect
 
-### Channel Configuration 
+### Channel Configuration
 
