@@ -169,10 +169,180 @@ function createOrgs() {
       fatalln "Failed to generate certificates..."
     fi
 
+    infoln "Creating Org3 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org3.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
     infoln "Creating Org4 Identities"
 
     set -x
     cryptogen generate --config=./organizations/cryptogen/crypto-config-org4.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org5 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org5.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org6 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org6.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org7 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org7.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org8 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org8.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org9 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org9.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org10 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org10.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org11 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org11.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org12 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org12.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org13 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org13.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org14 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org14.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org15 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org15.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org16 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org16.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org17 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org17.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org18 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org18.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org19 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org19.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+    if [ $res -ne 0 ]; then
+      fatalln "Failed to generate certificates..."
+    fi
+
+    infoln "Creating Org20 Identities"
+
+    set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-org20.yaml --output="organizations"
     res=$?
     { set +x; } 2>/dev/null
     if [ $res -ne 0 ]; then
@@ -221,7 +391,7 @@ function createOrgs() {
 
   fi
 
-  infoln "Generating CCP files for Org1, Org2 and Org4"
+  infoln "Generating CCP files for all systems"
   ./organizations/ccp-generate.sh
 }
 
@@ -344,7 +514,27 @@ function networkDown() {
   # Don't remove the generated artifacts -- note, the ledgers are always removed
   if [ "$MODE" != "restart" ]; then
     # Bring down the network, deleting the volumes
-    ${CONTAINER_CLI} volume rm docker_orderer.example.com docker_peer0.org1.example.com docker_peer0.org2.example.com docker_peer0.org4.example.com
+    ${CONTAINER_CLI} volume rm docker_orderer.example.com 
+    ${CONTAINER_CLI} volume rm docker_peer0.org1.example.com 
+    ${CONTAINER_CLI} volume rm docker_peer0.org2.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org3.example.com 
+    ${CONTAINER_CLI} volume rm docker_peer0.org4.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org5.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org6.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org7.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org8.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org9.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org10.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org11.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org12.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org13.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org14.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org15.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org16.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org17.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org18.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org19.example.com
+    ${CONTAINER_CLI} volume rm docker_peer0.org20.example.com
     #Cleanup the chaincode containers
     clearContainers
     #Cleanup images
@@ -356,7 +546,24 @@ function networkDown() {
     ## remove fabric ca artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org1/msp organizations/fabric-ca/org1/tls-cert.pem organizations/fabric-ca/org1/ca-cert.pem organizations/fabric-ca/org1/IssuerPublicKey organizations/fabric-ca/org1/IssuerRevocationPublicKey organizations/fabric-ca/org1/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org2/msp organizations/fabric-ca/org2/tls-cert.pem organizations/fabric-ca/org2/ca-cert.pem organizations/fabric-ca/org2/IssuerPublicKey organizations/fabric-ca/org2/IssuerRevocationPublicKey organizations/fabric-ca/org2/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org3/msp organizations/fabric-ca/org3/tls-cert.pem organizations/fabric-ca/org3/ca-cert.pem organizations/fabric-ca/org3/IssuerPublicKey organizations/fabric-ca/org3/IssuerRevocationPublicKey organizations/fabric-ca/org3/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org4/msp organizations/fabric-ca/org4/tls-cert.pem organizations/fabric-ca/org4/ca-cert.pem organizations/fabric-ca/org4/IssuerPublicKey organizations/fabric-ca/org4/IssuerRevocationPublicKey organizations/fabric-ca/org4/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org5/msp organizations/fabric-ca/org5/tls-cert.pem organizations/fabric-ca/org5/ca-cert.pem organizations/fabric-ca/org5/IssuerPublicKey organizations/fabric-ca/org5/IssuerRevocationPublicKey organizations/fabric-ca/org5/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org6/msp organizations/fabric-ca/org6/tls-cert.pem organizations/fabric-ca/org6/ca-cert.pem organizations/fabric-ca/org6/IssuerPublicKey organizations/fabric-ca/org6/IssuerRevocationPublicKey organizations/fabric-ca/org6/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org7/msp organizations/fabric-ca/org7/tls-cert.pem organizations/fabric-ca/org7/ca-cert.pem organizations/fabric-ca/org7/IssuerPublicKey organizations/fabric-ca/org7/IssuerRevocationPublicKey organizations/fabric-ca/org7/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org8/msp organizations/fabric-ca/org8/tls-cert.pem organizations/fabric-ca/org8/ca-cert.pem organizations/fabric-ca/org8/IssuerPublicKey organizations/fabric-ca/org8/IssuerRevocationPublicKey organizations/fabric-ca/org8/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org9/msp organizations/fabric-ca/org9/tls-cert.pem organizations/fabric-ca/org9/ca-cert.pem organizations/fabric-ca/org9/IssuerPublicKey organizations/fabric-ca/org9/IssuerRevocationPublicKey organizations/fabric-ca/org9/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org10/msp organizations/fabric-ca/org10/tls-cert.pem organizations/fabric-ca/org10/ca-cert.pem organizations/fabric-ca/org10/IssuerPublicKey organizations/fabric-ca/org10/IssuerRevocationPublicKey organizations/fabric-ca/org10/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org11/msp organizations/fabric-ca/org11tls-cert.pem organizations/fabric-ca/org11/ca-cert.pem organizations/fabric-ca/org11/IssuerPublicKey organizations/fabric-ca/org11/IssuerRevocationPublicKey organizations/fabric-ca/org11/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org12/msp organizations/fabric-ca/org12/tls-cert.pem organizations/fabric-ca/org12/ca-cert.pem organizations/fabric-ca/org12/IssuerPublicKey organizations/fabric-ca/org12/IssuerRevocationPublicKey organizations/fabric-ca/org12/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org13/msp organizations/fabric-ca/org13/tls-cert.pem organizations/fabric-ca/org13/ca-cert.pem organizations/fabric-ca/org13/IssuerPublicKey organizations/fabric-ca/org13/IssuerRevocationPublicKey organizations/fabric-ca/org13/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org14/msp organizations/fabric-ca/org14/tls-cert.pem organizations/fabric-ca/org14/ca-cert.pem organizations/fabric-ca/org14/IssuerPublicKey organizations/fabric-ca/org14/IssuerRevocationPublicKey organizations/fabric-ca/org14/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org15/msp organizations/fabric-ca/org15/tls-cert.pem organizations/fabric-ca/org15/ca-cert.pem organizations/fabric-ca/org15/IssuerPublicKey organizations/fabric-ca/org15/IssuerRevocationPublicKey organizations/fabric-ca/org15/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org16/msp organizations/fabric-ca/org16/tls-cert.pem organizations/fabric-ca/org16/ca-cert.pem organizations/fabric-ca/org16/IssuerPublicKey organizations/fabric-ca/org16/IssuerRevocationPublicKey organizations/fabric-ca/org16/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org17/msp organizations/fabric-ca/org17/tls-cert.pem organizations/fabric-ca/org17/ca-cert.pem organizations/fabric-ca/org17/IssuerPublicKey organizations/fabric-ca/org17/IssuerRevocationPublicKey organizations/fabric-ca/org17/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org18/msp organizations/fabric-ca/org18/tls-cert.pem organizations/fabric-ca/org18/ca-cert.pem organizations/fabric-ca/org18/IssuerPublicKey organizations/fabric-ca/org18/IssuerRevocationPublicKey organizations/fabric-ca/org18/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org19/msp organizations/fabric-ca/org19/tls-cert.pem organizations/fabric-ca/org19/ca-cert.pem organizations/fabric-ca/org19/IssuerPublicKey organizations/fabric-ca/org19/IssuerRevocationPublicKey organizations/fabric-ca/org19/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org20/msp organizations/fabric-ca/org20/tls-cert.pem organizations/fabric-ca/org20/ca-cert.pem organizations/fabric-ca/org20/IssuerPublicKey organizations/fabric-ca/org20/IssuerRevocationPublicKey organizations/fabric-ca/org20/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/ordererOrg/msp organizations/fabric-ca/ordererOrg/tls-cert.pem organizations/fabric-ca/ordererOrg/ca-cert.pem organizations/fabric-ca/ordererOrg/IssuerPublicKey organizations/fabric-ca/ordererOrg/IssuerRevocationPublicKey organizations/fabric-ca/ordererOrg/fabric-ca-server.db'
     # remove channel and script artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf channel-artifacts log.txt *.tar.gz'

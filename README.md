@@ -35,7 +35,7 @@ There are few organizations however each organization only has one peer. In real
 **R1** - Building organization  
 **R2** - Building certifier (for the E-score)  
 **R3** - Builder  
-**R4** - SpectrumBond (manufacturer and supplier of sheet metal roofs of various colours and styles)  
+**R4** - PigmentBond (manufacturer and supplier of sheet metal roofs of various colours and styles)  
 **R5** - Concrete Queens Without Tiaras, CQWT (subcontractor that provides concreting solutions)  
 **R6** - Coral (Concrete mixes)  
 **R7** - Ninety degree beach cement (local importer of cement)  
@@ -58,7 +58,7 @@ There are few organizations however each organization only has one peer. In real
 There are 5 channels used in the prototype. more could be used but due to resource constraints it was limited to 5 channels.  
 
 **CC1** - Contains R1 and R4 (This is the channel for the sheet metal transaction)  
-**CC2** - Contains R1, R3, R5, R6, R7, R8, R9, R10, R11, R12 and R12 (This is the channel for the concrete)  
+**CC2** - Contains R1, R3, R5, R6, R7, R8, R9, R10, R11, R12 and R13 (This is the channel for the concrete)  
 **CC3** - Contains R1, R3, R14, R15, R16 and R18 (This is the channel timber)  
 **CC4** - Contains R1, R3, R17, R18 and R19 (This is the channel for the FC sheets)  
 **CC5** - Contains R1, R2, R3 and R20 (This is the channel for the building, builder and architect)
