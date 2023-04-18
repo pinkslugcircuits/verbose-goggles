@@ -27,7 +27,7 @@ createChannelGenesisBlock() {
 		fatalln "configtxgen tool not found."
 	fi
 	set -x
-	configtxgen -profile TwoOrgsApplicationGenesis -outputBlock ./channel-artifacts/${CHANNEL_NAME}.block -channelID $CHANNEL_NAME
+	configtxgen -profile concreteApplicationGenesis -outputBlock ./channel-artifacts/${CHANNEL_NAME}.block -channelID $CHANNEL_NAME
 	res=$?
 	{ set +x; } 2>/dev/null
   verifyResult $res "Failed to generate channel configuration transaction..."
@@ -94,17 +94,49 @@ successln "Channel '$CHANNEL_NAME' created"
 ## Join all the peers to the channel
 infoln "Joining org1 peer to the channel..."
 joinChannel 1
-infoln "Joining org2 peer to the channel..."
-joinChannel 2
-infoln "Joining org4 peer to the channel..."
-joinChannel 4
+infoln "Joining org3 peer to the channel..."
+joinChannel 3
+infoln "Joining org5 peer to the channel..."
+joinChannel 5
+infoln "Joining org6 peer to the channel..."
+joinChannel 6
+infoln "Joining org7 peer to the channel..."
+joinChannel 7
+infoln "Joining org8 peer to the channel..."
+joinChannel 8
+infoln "Joining org9 peer to the channel..."
+joinChannel 9
+infoln "Joining org10 peer to the channel..."
+joinChannel 10
+infoln "Joining org11 peer to the channel..."
+joinChannel 11
+infoln "Joining org12 peer to the channel..."
+joinChannel 12
+infoln "Joining org13 peer to the channel..."
+joinChannel 13
 
 ## Set the anchor peers for each org in the channel
 infoln "Setting anchor peer for org1..."
 setAnchorPeer 1
-infoln "Setting anchor peer for org2..."
-setAnchorPeer 2
-infoln "Setting anchor peer for org4..."
-setAnchorPeer 4
+infoln "Setting anchor peer for org3..."
+setAnchorPeer 3
+infoln "Setting anchor peer for org5..."
+setAnchorPeer 5
+infoln "Setting anchor peer for org6..."
+setAnchorPeer 6
+infoln "Setting anchor peer for org7..."
+setAnchorPeer 7
+infoln "Setting anchor peer for org8..."
+setAnchorPeer 8
+infoln "Setting anchor peer for org9..."
+setAnchorPeer 9
+infoln "Setting anchor peer for org10..."
+setAnchorPeer 10
+infoln "Setting anchor peer for org11..."
+setAnchorPeer 11
+infoln "Setting anchor peer for org12..."
+setAnchorPeer 12
+infoln "Setting anchor peer for org13..."
+setAnchorPeer 13
 
 successln "Channel '$CHANNEL_NAME' joined"

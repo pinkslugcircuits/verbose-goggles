@@ -472,7 +472,11 @@ function createChannel() {
 
   # now run the script that creates a channel. This script uses configtxgen once
   # to create the channel creation transaction and the anchor peer updates.
-  scripts/createChannel.sh "$CHANNEL_NAME" "$CLI_DELAY" "$MAX_RETRY" $VERBOSE
+  scripts/createChannel1.sh "sheet-metal" "$CLI_DELAY" "$MAX_RETRY" $VERBOSE
+  scripts/createChannel2.sh "concrete" "$CLI_DELAY" "$MAX_RETRY" $VERBOSE
+  scripts/createChannel3.sh "timber" "$CLI_DELAY" "$MAX_RETRY" $VERBOSE
+  scripts/createChannel4.sh "fc" "$CLI_DELAY" "$MAX_RETRY" $VERBOSE
+  scripts/createChannel5.sh "building" "$CLI_DELAY" "$MAX_RETRY" $VERBOSE
 }
 
 
