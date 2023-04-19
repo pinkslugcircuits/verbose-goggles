@@ -1,6 +1,6 @@
 # verbose-goggles
 
-The code in this repository is not for production use. It is made up from modified example code from the Hyperledger Fabric samples repository. if you need even more convincing that it is not production ready we have included the status of the code after having run through the super linter below. 
+The code in this repository is not for production use. It is made up from modified example code from the Hyperledger Fabric samples repository. if you need even more convincing that it is not production ready we have included the status of the code after having run through the super linter below.
 
 [![GitHub Super-Linter](https://github.com/pinkslugcircuits/verbose-goggles/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
@@ -15,12 +15,17 @@ Hyperledger fabric was the blockchain tool chain selected by the researcher to d
 ## Environment setup
 This repository is based of Hyperledger fabric network tools. It requires the environment to be setup in a way specified in the Hyperledger fabric manual. The `envsetup.sh` tool will set up the environment on a Ubuntu 24.04 LTS system (VM or physical machine). Other Ubuntu versions may be supported but have not been tested.
 
-The environment is setup by running the `./envsetup.sh setup` command. If you want to quickly check your environment with running the full setup you can run the `./envsetup.sh verify-all` command.
+The environment is setup by running the `./envsetup.sh setup` command. If you want to quickly check your environment to check if it can support the full setup you can run the `./envsetup.sh verify-all` command.
 
 Once the environment is setup you can then run the prototype network.
 
 ## Running the prototype network
 
+The code repository needs to run from within the hyperledger `fabric-sample` folder. The repository folder should be cloned to the first level of the `fabric-sample` folder.  
+
+Open a terminal session withing the repository folder. In the terminal session type `./network.sh up createChannel` command and the peer servers for all the organization will be created and run. The genesis blocks and  channels allowing the peers to talk to each other will also be created and the peers enrolled in the channels.  
+
+To bring the network back down and remove the created files run the `./network.sh down` command and all the containers will stop running and all the containers, images and volumes will be deleted along with the databases.
 
 ## System Architecture
 
