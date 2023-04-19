@@ -1,5 +1,7 @@
 # verbose-goggles
 
+The code in this repository is not for production use. It is made up from modified example code from the Hyperledger Fabric samples repository. if you need even more convincing that it is not production ready we have included the status of the code after having run through the super linter below. 
+
 [![GitHub Super-Linter](https://github.com/pinkslugcircuits/verbose-goggles/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 ## Background
