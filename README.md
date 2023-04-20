@@ -29,7 +29,9 @@ To bring the network back down and remove the created files run the `./network.s
 
 ## System Architecture
 
-This prototype blockchain solution is built using the Hyperledger Fabric tool chain. It simulates the supply chains for 4 product types. The supply chains are represented at different degrees of resolution. Some are simple representations such as a manufacture direct to the builder. In the case of the concrete supply chain a more complicated example with importers, exporters, mixers, shipping and builders are represented.  
+This prototype blockchain solution is built using the Hyperledger Fabric tool chain. It simulates the supply chains for 4 product types. The supply chains are represented at different degrees of resolution.  
+
+Some are simple representations such as a manufacture direct to the builder. In the case of the concrete supply chain a more complicated example with importers, exporters, mixers, shipping and builders are represented.  
 
 The prototype network in this repository consists of one ordering node to handel all the blockchain updates. Each stage of the supply chain is represented by an organization. Each organization has only one peer. The peer hosts a copy of the blockchain ledger and runs the smart contract (chain code) for that peer.  
 
