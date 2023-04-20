@@ -29,7 +29,20 @@ To bring the network back down and remove the created files run the `./network.s
 
 ## System Architecture
 
-The blockchain network has the following components.
+This prototype blockchain solution is built using the Hyperledger Fabric tool chain. It simulates the supply chains for 4 product types. The supply chains are represented at different degrees of resolution. Some are simple representations such as a manufacture direct to the builder. In the case of the concrete supply chain a more complicated example with importers, exporters, mixers, shipping and builders are represented.  
+
+The prototype network in this repository consists of one ordering node to handel all the blockchain updates. Each stage of the supply chain is represented by an organization. Each organization has only one peer. The peer hosts a copy of the blockchain ledger and runs the smart contract (chain code) for that peer.  
+
+The peers are joined to channels that allow them to talk to each other. Peers can only talk to each other when  
+1. Both peers are connected to the same channel.
+2. Both peers are running the same compatible chain code.
+3. Both peers are added to the chain code genesis block which defines the configuration of the channel and blockchain.  
+
+External application can connect to the peers to trigger changes to the blockchain through invoking modules in the chain code running on the peers. Each peer can manage what application can connect to it.
+
+Peers can be connected to more then one peer at the same time.  
+
+The configuration of the network is described in more detail below.
 
 ### Ordering Services
 
