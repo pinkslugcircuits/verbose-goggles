@@ -84,3 +84,49 @@ There are 5 channels used in the prototype. more could be used but due to resour
 **CC3** - Contains R1, R3, R14, R15, R16 and R18 (This is the channel timber)  
 **CC4** - Contains R1, R3, R17, R18 and R19 (This is the channel for the FC sheets)  
 **CC5** - Contains R1, R2, R3 and R20 (This is the channel for the building, builder and architect)
+
+### Port mapping
+
+**7054** - Org1 CA, local host  
+**8054** - Org2 CA, local host  
+**9054** - Ordering service CA, local host 
+**11054** - Org3 CA, local host  
+**12054** - Org4 CA, local host  
+**13054** - Org5 CA, local host  
+**14054** - Org6 CA, local host  
+**15054** - Org7 CA, local host  
+**16054** - Org8 CA, local host  
+**17054** - Org9 CA, local host  
+**18054** - Org10 CA, local host  
+**19054** - Org11 CA, local host  
+**20054** - Org12 CA, local host  
+**21054** - Org13 CA, local host  
+**22054** - Org14 CA, local host  
+**23054** - Org15 CA, local host  
+**24054** - Org16 CA, local host  
+**25054** - Org17 CA, local host  
+**26054** - Org18 CA, local host  
+**27054** - Org19 CA, local host  
+**28054** - Org20 CA, local host  
+**29054** - Org1 CA, listen address  
+**30054** - Org2 CA, listen address  
+**31054** - Ordering service CA, listen address  
+**32054** - Org3 CA, listen address  
+**33054** - Org4 CA, listen address  
+**34054** - Org5 CA, listen address  
+**35054** - Org6 CA, listen address  
+**36054** - Org7 CA, listen address  
+**37054** - Org8 CA, listen address  
+**38054** - Org9 CA, listen address  
+**39054** - Org10 CA, listen address  
+**40054** - Org11 CA, listen address  
+**41054** - Org12 CA, listen address  
+**42054** - Org13 CA, listen address  
+**43054** - Org14 CA, listen address   
+**44054** - Org15 CA, listen address  
+**45054** - Org16 CA, listen address  
+**46054** - Org17 CA, listen address  
+**47054** - Org18 CA, listen address  
+**48054** - Org19 CA, listen address   
+**49054** - Org20 CA, listen address  
+

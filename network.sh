@@ -385,6 +385,78 @@ function createOrgs() {
 
     createOrg2
 
+    infoln "Creating Org3 Identities"
+
+    createOrg3
+
+    infoln "Creating Org4 Identities"
+
+    createOrg4
+
+    infoln "Creating Org5 Identities"
+
+    createOrg5
+
+    infoln "Creating Org6 Identities"
+
+    createOrg6
+
+    infoln "Creating Org7 Identities"
+
+    createOrg7
+
+    infoln "Creating Org8 Identities"
+
+    createOrg8
+
+    infoln "Creating Org9 Identities"
+
+    createOrg9
+
+    infoln "Creating Org10 Identities"
+
+    createOrg10
+
+    infoln "Creating Org11 Identities"
+
+    createOrg11
+
+    infoln "Creating Org12 Identities"
+
+    createOrg12
+
+    infoln "Creating Org13 Identities"
+
+    createOrg13
+
+    infoln "Creating Org14 Identities"
+
+    createOrg14
+
+    infoln "Creating Org15 Identities"
+
+    createOrg15
+
+    infoln "Creating Org16 Identities"
+
+    createOrg16
+
+    infoln "Creating Org17 Identities"
+
+    createOrg17
+
+    infoln "Creating Org18 Identities"
+
+    createOrg18
+
+    infoln "Creating Org19 Identities"
+
+    createOrg19
+
+    infoln "Creating Org20 Identities"
+
+    createOrg20
+
     infoln "Creating Orderer Org Identities"
 
     createOrderer
@@ -522,27 +594,28 @@ function networkDown() {
   # Don't remove the generated artifacts -- note, the ledgers are always removed
   if [ "$MODE" != "restart" ]; then
     # Bring down the network, deleting the volumes
-    ${CONTAINER_CLI} volume rm docker_orderer.example.com 
-    ${CONTAINER_CLI} volume rm docker_peer0.org1.example.com 
-    ${CONTAINER_CLI} volume rm docker_peer0.org2.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org3.example.com 
-    ${CONTAINER_CLI} volume rm docker_peer0.org4.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org5.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org6.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org7.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org8.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org9.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org10.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org11.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org12.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org13.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org14.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org15.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org16.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org17.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org18.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org19.example.com
-    ${CONTAINER_CLI} volume rm docker_peer0.org20.example.com
+    ${CONTAINER_CLI} volume rm compose_orderer.example.com 
+    ${CONTAINER_CLI} volume rm compose_peer0.org1.example.com 
+    ${CONTAINER_CLI} volume rm compose_peer0.org2.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org3.example.com 
+    ${CONTAINER_CLI} volume rm compose_peer0.org4.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org5.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org6.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org7.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org8.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org9.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org10.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org11.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org12.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org13.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org14.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org15.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org16.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org17.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org18.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org19.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org20.example.com
+
     #Cleanup the chaincode containers
     clearContainers
     #Cleanup images
@@ -562,7 +635,7 @@ function networkDown() {
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org8/msp organizations/fabric-ca/org8/tls-cert.pem organizations/fabric-ca/org8/ca-cert.pem organizations/fabric-ca/org8/IssuerPublicKey organizations/fabric-ca/org8/IssuerRevocationPublicKey organizations/fabric-ca/org8/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org9/msp organizations/fabric-ca/org9/tls-cert.pem organizations/fabric-ca/org9/ca-cert.pem organizations/fabric-ca/org9/IssuerPublicKey organizations/fabric-ca/org9/IssuerRevocationPublicKey organizations/fabric-ca/org9/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org10/msp organizations/fabric-ca/org10/tls-cert.pem organizations/fabric-ca/org10/ca-cert.pem organizations/fabric-ca/org10/IssuerPublicKey organizations/fabric-ca/org10/IssuerRevocationPublicKey organizations/fabric-ca/org10/fabric-ca-server.db'
-    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org11/msp organizations/fabric-ca/org11tls-cert.pem organizations/fabric-ca/org11/ca-cert.pem organizations/fabric-ca/org11/IssuerPublicKey organizations/fabric-ca/org11/IssuerRevocationPublicKey organizations/fabric-ca/org11/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org11/msp organizations/fabric-ca/org11/tls-cert.pem organizations/fabric-ca/org11/ca-cert.pem organizations/fabric-ca/org11/IssuerPublicKey organizations/fabric-ca/org11/IssuerRevocationPublicKey organizations/fabric-ca/org11/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org12/msp organizations/fabric-ca/org12/tls-cert.pem organizations/fabric-ca/org12/ca-cert.pem organizations/fabric-ca/org12/IssuerPublicKey organizations/fabric-ca/org12/IssuerRevocationPublicKey organizations/fabric-ca/org12/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org13/msp organizations/fabric-ca/org13/tls-cert.pem organizations/fabric-ca/org13/ca-cert.pem organizations/fabric-ca/org13/IssuerPublicKey organizations/fabric-ca/org13/IssuerRevocationPublicKey organizations/fabric-ca/org13/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org14/msp organizations/fabric-ca/org14/tls-cert.pem organizations/fabric-ca/org14/ca-cert.pem organizations/fabric-ca/org14/IssuerPublicKey organizations/fabric-ca/org14/IssuerRevocationPublicKey organizations/fabric-ca/org14/fabric-ca-server.db'
@@ -575,6 +648,30 @@ function networkDown() {
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/ordererOrg/msp organizations/fabric-ca/ordererOrg/tls-cert.pem organizations/fabric-ca/ordererOrg/ca-cert.pem organizations/fabric-ca/ordererOrg/IssuerPublicKey organizations/fabric-ca/ordererOrg/IssuerRevocationPublicKey organizations/fabric-ca/ordererOrg/fabric-ca-server.db'
     # remove channel and script artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf channel-artifacts log.txt *.tar.gz'
+
+    # Bring down the network, deleting the volumes. run twice due to errors running once
+    ${CONTAINER_CLI} volume rm compose_orderer.example.com 
+    ${CONTAINER_CLI} volume rm compose_peer0.org1.example.com 
+    ${CONTAINER_CLI} volume rm compose_peer0.org2.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org3.example.com 
+    ${CONTAINER_CLI} volume rm compose_peer0.org4.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org5.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org6.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org7.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org8.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org9.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org10.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org11.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org12.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org13.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org14.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org15.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org16.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org17.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org18.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org19.example.com
+    ${CONTAINER_CLI} volume rm compose_peer0.org20.example.com
+
   fi
 }
 
