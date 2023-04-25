@@ -87,6 +87,8 @@ There are 5 channels used in the prototype. more could be used but due to resour
 
 ### Port mapping
 
+#### Certificate Authority ports  
+
 **7054** - Org1 CA, local host  
 **8054** - Org2 CA, local host  
 **9054** - Ordering service CA, local host 
@@ -130,3 +132,8 @@ There are 5 channels used in the prototype. more could be used but due to resour
 **48054** - Org19 CA, listen address   
 **49054** - Org20 CA, listen address  
 
+#### other
+
+**7051** - Org1 LISTENADDRESS  
+**7052** - Org1 CHAINCODEADDRESS and CHAINCODELISTENADDRESS  
+**9444** - Org1 OPERATIONS_LISTENADDRESS  
