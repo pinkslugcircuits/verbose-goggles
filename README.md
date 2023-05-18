@@ -58,21 +58,21 @@ There are few organizations however each organization only has one peer. In real
 **R2** - Building certifier (for the E-score)  
 **R3** - Builder  
 **R4** - Sheet metal roof supplier  
-**R5** - subcontractor that provides concreting solutions  
+**R5** - Subcontractor that provides concreting solutions  
 **R6** - Concrete mixes  
-**R7** - local importer of cement  
+**R7** - Local importer of cement  
 **R8** - Dry bulk goods shipping company  
-**R9** - exporter of cement  
-**R10** - manufacturer of cement  
-**R11** - supplier of clay  
-**R12** - supplier of lime  
-**R13** - supplier of sand  
-**R14** - supplier of building goods  
-**R15** - timber mill  
-**R16** - pine tree plantation  
-**R17** - plantation certifier  
-**R18** - supplier and manufacturer of building materials.  
-**R19** - manufacturer of FC sheets.  
+**R9** - Exporter of cement  
+**R10** - Manufacturer of cement  
+**R11** - Supplier of clay  
+**R12** - Supplier of lime  
+**R13** - Supplier of sand  
+**R14** - Supplier of building goods  
+**R15** - Timber mill  
+**R16** - Pine tree plantation  
+**R17** - Plantation certifier  
+**R18** - Supplier and manufacturer of building materials.  
+**R19** - Manufacturer of FC sheets.  
 **R20** - Architect
 
 ### Channel Configuration
