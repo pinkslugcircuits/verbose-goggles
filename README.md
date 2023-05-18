@@ -57,22 +57,22 @@ There are few organizations however each organization only has one peer. In real
 **R1** - Building organization  
 **R2** - Building certifier (for the E-score)  
 **R3** - Builder  
-**R4** - PigmentBond (manufacturer and supplier of sheet metal roofs of various colours and styles)  
-**R5** - Concrete Queens Without Tiaras, CQWT (subcontractor that provides concreting solutions)  
-**R6** - Coral (Concrete mixes)  
-**R7** - Ninety degree beach cement (local importer of cement)  
-**R8** - Youngendorff Carriers (Dry bulk goods shipping company)  
-**R9** - net import deficit inc (exporter of cement)  
-**R10** - OuterCement (manufacturer of cement)  
-**R11** - Argentine Brick Pit (supplier of clay)  
-**R12** - Lemon and bitter mine (supplier of lime)  
-**R13** - Hourglass mine (supplier of sand)  
-**R14** - Hummings (supplier of building goods)  
-**R15** - Flora Slaughter (timber mill)  
-**R16** - Pine Wispier Plantation (pine tree plantation)  
-**R17** - Flora Supplier Certifier (plantation certifier)  
-**R18** - Janet Softings (supplier and manufacturer of building materials. Is a division of JS holdings)  
-**R19** - Janet Softings FC (manufacturer of FC sheets. Is a division of JS holdings)  
+**R4** - Sheet metal roof supplier  
+**R5** - subcontractor that provides concreting solutions  
+**R6** - Concrete mixes  
+**R7** - local importer of cement  
+**R8** - Dry bulk goods shipping company  
+**R9** - exporter of cement  
+**R10** - manufacturer of cement  
+**R11** - supplier of clay  
+**R12** - supplier of lime  
+**R13** - supplier of sand  
+**R14** - supplier of building goods  
+**R15** - timber mill  
+**R16** - pine tree plantation  
+**R17** - plantation certifier  
+**R18** - supplier and manufacturer of building materials.  
+**R19** - manufacturer of FC sheets.  
 **R20** - Architect
 
 ### Channel Configuration
