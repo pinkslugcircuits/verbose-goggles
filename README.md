@@ -25,6 +25,8 @@ The code repository needs to run from within the hyperledger `fabric-sample` fol
 
 Open a terminal session withing the repository folder. In the terminal session type `./network.sh up createChannel` command and the peer servers for all the organization will be created and run. The genesis blocks and  channels allowing the peers to talk to each other will also be created and the peers enrolled in the channels.  
 
+To install the IBM example test-network smart contracts or chain code as hyperledger calls it run the following command. `./network.sh deployCC -ccn basic -ccp ./chaincode/chaincode-go -ccl go`
+
 To bring the network back down and remove the created files run the `./network.sh down` command and all the containers will stop running and all the containers, images and volumes will be deleted along with the databases.
 
 ## System Architecture

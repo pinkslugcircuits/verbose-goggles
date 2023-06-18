@@ -1,0 +1,11 @@
+--2023-05-30 21:30:21--  https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
+Resolving dl.google.com (dl.google.com)... 172.217.167.110, 2404:6800:4006:80b::200e
+Connecting to dl.google.com (dl.google.com)|172.217.167.110|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 123658438 (118M) [application/gzip]
+Saving to: ‘STDOUT’
+
+-                          0%[                                   ]  45.46K   148KB/s    in 0.3s    
+
+
+Cannot write to ‘-’ (Success).
